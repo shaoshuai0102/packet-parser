@@ -1,0 +1,44 @@
+{
+  "name": "packet-parser",
+  "version": "1.0.0",
+  "description": "Parse packet from readable streams.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R spec -t 20000 test/*.test.js",
+    "test-cov": "istanbul cover --report html _mocha -- -t 2000 -R spec test/*.test.js",
+    "test-coveralls": "istanbul cover --report lcovonly _mocha -- -t 2000 -R spec test/*.test.js && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shaoshuai0102/packet-parser.git"
+  },
+  "files":[
+    "index.js"
+  ],
+  "keywords": [
+    "stream",
+    "packet",
+    "parser",
+    "cutter"
+  ],
+  "author": "shaoshuai0102 <shaoshuai0102@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shaoshuai0102/packet-parser/issues"
+  },
+  "homepage": "https://github.com/shaoshuai0102/packet-parser#readme",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "coveralls": "^2.11.9",
+    "eslint": "^2.5.3",
+    "eslint-config-egg": "~2.0.0",
+    "istanbul": "^0.4.2",
+    "mocha": "^2.4.5",
+    "should": "^8.3.0"
+  },
+  "engines": {
+    "node": ">=4.3.0"
+  }
+}
